@@ -1,146 +1,753 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shaina Raza, PhD — Responsible AI Leader | Top 2% Scientist | Keynote Speaker</title>
-  <meta name="description" content="Dr. Shaina Raza — Applied ML Scientist at Vector Institute; Keynote Speaker and Top 2% Scientist. Research in Responsible AI, fairness, and multimodal LLMs. Partner in EU Horizon AIXPERT Project." />
-  <meta name="keywords" content="Shaina Raza, Responsible AI, Applied ML Scientist, Keynote Speaker, Top 2% Scientist, Vector Institute, NeurIPS, AIXPERT EU Horizon, AI Governance" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <style>
-    body{font-family:'Roboto',sans-serif;line-height:1.6;color:#333;background:#fff;}
-    h1,h2,h3,h4{font-family:'Playfair Display',serif;color:#2c3e50;}
-    header{text-align:center;padding:2rem 0;background:linear-gradient(to right,#f8f9fa,#e9ecef);border-bottom:1px solid #dee2e6;}
-    header img{border-radius:50%;width:150px;height:150px;object-fit:cover;margin-bottom:1rem;}
-    header p{margin-bottom:.4rem;color:#6c757d;}
-    .section-title{margin-top:3rem;font-size:1.75rem;border-bottom:3px solid #dee2e6;padding-bottom:.5rem;}
-    ul{padding-left:1.5rem;}ul li{margin-bottom:.6rem;}
-    a{color:#007bff;text-decoration:none;}a:hover{text-decoration:underline;}
-    .highlight-box{background:#f1f3f5;border-left:4px solid #007bff;padding:1rem;margin-bottom:2rem;border-radius:6px;}
-    .award-banner{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:1.5rem;margin-top:2rem;}
-    .award-banner .row{display:flex;align-items:center;}
-    .award-banner img{max-width:100%;height:auto;border-radius:8px;max-height:200px;}
-    details summary{cursor:pointer;font-weight:600;}
-    details summary::-webkit-details-marker{display:none;}
-    details summary::after{content:" ▶";}
-    details[open] summary::after{content:" ▼";}
-    footer{text-align:center;padding:2rem 0;background:#e9ecef;margin-top:3rem;font-size:.9rem;}
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Shaina Raza, PhD — Responsible AI Leader | Top 2% Scientist</title>
+<meta name="description" content="Dr. Shaina Raza — Applied ML Scientist at Vector Institute. Top 2% Scientist. Responsible AI Leader of the Year 2025. Expert in LLMs, Multimodal AI, Fairness, Green AI."/>
+<meta name="keywords" content="Shaina Raza, Responsible AI, Applied ML Scientist, Keynote Speaker, Top 2% Scientist, Vector Institute, NeurIPS, ICML, AIXPERT, AI Governance, LLM Fairness"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap"/>
+<style>
+:root{
+  --ink:#0e1117;--ink2:#3d4451;--ink3:#6b7280;
+  --paper:#fafaf8;--paper2:#f3f2ee;--paper3:#eae9e3;
+  --accent:#1a3a5c;--accent2:#2a5a8c;--accent-light:#e8f0f8;
+  --gold:#b8860b;--gold-light:#fdf6e3;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --red:#a32d2d;
+  --border:#dddbd2;
+  --r:8px;--r2:14px;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --shadow:0 1px 3px rgba(0,0,0,.07),0 4px 16px rgba(0,0,0,.04);
+  --shadow2:0 2px 8px rgba(0,0,0,.10),0 8px 32px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;}
 
-    /* Make Academic Service extra subtle */
-    #service details{background:#fafbfc;border:1px dashed #e1e4e8;border-radius:6px;padding:.75rem 1rem;}
-    #service summary{font-size:1.05rem;color:#4a5568;}
-  </style>
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{font-family:var(--serif);font-size:1.15rem;color:var(--accent);text-decoration:none;letter-spacing:-.01em;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:.875rem;font-weight:400;color:var(--ink2);text-decoration:none;letter-spacing:.01em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+.nav-btn{font-size:.8rem;font-weight:500;background:var(--accent);color:#fff;padding:.35rem .9rem;border-radius:var(--r);text-decoration:none;transition:background .2s;}
+.nav-btn:hover{background:var(--accent2);}
+
+/* ── HERO ── */
+.hero{max-width:1100px;margin:0 auto;padding:5rem 2rem 4rem;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;}
+.hero-text h1{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--accent);line-height:1.15;letter-spacing:-.02em;margin-bottom:.6rem;}
+.hero-text h1 em{font-style:italic;color:var(--accent2);}
+.hero-subtitle{font-size:1.05rem;color:var(--ink2);margin-bottom:1.5rem;font-weight:300;line-height:1.5;}
+.badge-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem;}
+.badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;font-weight:500;padding:.3rem .7rem;border-radius:20px;letter-spacing:.02em;}
+.badge-gold{background:var(--gold-light);color:var(--gold);border:1px solid #e8d58a;}
+.badge-teal{background:var(--teal-light);color:var(--teal);border:1px solid #9fdcc8;}
+.badge-navy{background:var(--accent-light);color:var(--accent);border:1px solid #b8cfe0;}
+.hero-links{display:flex;flex-wrap:wrap;gap:.75rem;}
+.btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:500;padding:.5rem 1.1rem;border-radius:var(--r);text-decoration:none;transition:all .2s;}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-primary:hover{background:var(--accent2);}
+.btn-outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent);}
+.btn-outline:hover{background:var(--accent-light);}
+.hero-card{background:#fff;border:1px solid var(--border);border-radius:var(--r2);padding:1.5rem;box-shadow:var(--shadow2);position:sticky;top:72px;}
+.hero-card img{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 1rem;border:3px solid var(--paper3);}
+.hero-card h2{font-family:var(--serif);font-size:1.15rem;color:var(--accent);text-align:center;margin-bottom:.25rem;}
+.hero-card .role{font-size:.8rem;color:var(--ink3);text-align:center;margin-bottom:1rem;}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:1rem;}
+.stat{background:var(--paper2);border-radius:var(--r);padding:.6rem .8rem;text-align:center;}
+.stat-num{font-family:var(--serif);font-size:1.4rem;color:var(--accent);line-height:1;}
+.stat-label{font-size:.68rem;color:var(--ink3);margin-top:.15rem;letter-spacing:.03em;}
+.card-links{display:flex;flex-direction:column;gap:.4rem;}
+.card-link{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--ink2);text-decoration:none;padding:.3rem 0;border-bottom:1px solid var(--border);}
+.card-link:last-child{border-bottom:none;}
+.card-link:hover{color:var(--accent);}
+.card-link svg{width:14px;height:14px;flex-shrink:0;opacity:.5;}
+
+/* ── LAYOUT ── */
+.page-body{max-width:1100px;margin:0 auto;padding:0 2rem 6rem;display:grid;grid-template-columns:1fr 280px;gap:3.5rem;align-items:start;}
+.main-col{min-width:0;}
+.side-col{position:sticky;top:72px;}
+
+/* ── SECTION ── */
+section{margin-bottom:3.5rem;}
+.section-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--border);}
+.section-head h2{font-family:var(--serif);font-size:1.5rem;color:var(--accent);}
+.section-tag{font-size:.7rem;font-weight:500;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;padding:.2rem .6rem;background:var(--paper2);border-radius:20px;}
+
+/* ── NEWS ── */
+.news-list{display:flex;flex-direction:column;gap:0;}
+.news-item{display:grid;grid-template-columns:90px 1fr;gap:.75rem 1rem;padding:.85rem 0;border-bottom:1px solid var(--paper3);}
+.news-item:last-child{border-bottom:none;}
+.news-date{font-size:.75rem;font-weight:500;color:var(--ink3);padding-top:.15rem;letter-spacing:.03em;}
+.news-body{font-size:.9rem;color:var(--ink2);line-height:1.55;}
+.news-body strong{color:var(--ink);font-weight:500;}
+.news-body a{color:var(--accent2);text-decoration:none;}
+.news-body a:hover{text-decoration:underline;}
+.news-tag{display:inline-block;font-size:.68rem;font-weight:500;padding:.15rem .5rem;border-radius:20px;margin-left:.4rem;vertical-align:middle;}
+.tag-icml{background:#e8f0f8;color:#1a3a5c;}
+.tag-neurips{background:#f3e8fd;color:#5b21b6;}
+.tag-award{background:#fdf6e3;color:#b8860b;}
+.tag-pub{background:#e1f5ee;color:#0f6e56;}
+.tag-talk{background:#fce7f3;color:#9d174d;}
+
+/* ── PROJECTS ── */
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.project-card{background:#fff;border:1px solid var(--border);border-radius:var(--r2);padding:1.25rem;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s;}
+.project-card:hover{box-shadow:var(--shadow2);transform:translateY(-2px);}
+.project-icon{width:36px;height:36px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:.75rem;}
+.project-card h3{font-size:.95rem;font-weight:500;color:var(--ink);margin-bottom:.35rem;line-height:1.3;}
+.project-card p{font-size:.8rem;color:var(--ink3);line-height:1.5;margin-bottom:.75rem;}
+.project-card a{font-size:.78rem;font-weight:500;color:var(--accent2);text-decoration:none;}
+.project-card a:hover{text-decoration:underline;}
+
+/* ── TALKS ── */
+.talks-list{display:flex;flex-direction:column;gap:.1rem;}
+.talk-item{display:grid;grid-template-columns:110px 1fr;gap:.5rem 1rem;padding:.75rem 0;border-bottom:1px solid var(--paper3);}
+.talk-item:last-child{border-bottom:none;}
+.talk-venue{font-size:.75rem;font-weight:500;color:var(--accent);letter-spacing:.02em;line-height:1.3;}
+.talk-meta{font-size:.7rem;color:var(--ink3);margin-top:.1rem;}
+.talk-title{font-size:.88rem;color:var(--ink2);line-height:1.45;}
+.talk-title em{font-style:italic;color:var(--ink3);font-size:.82rem;}
+
+/* ── PUBLICATIONS ── */
+.pub-list{display:flex;flex-direction:column;gap:.1rem;}
+.pub-item{padding:.8rem 0;border-bottom:1px solid var(--paper3);}
+.pub-item:last-child{border-bottom:none;}
+.pub-title{font-size:.9rem;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:.25rem;}
+.pub-meta{font-size:.78rem;color:var(--ink3);line-height:1.4;}
+.pub-meta a{color:var(--accent2);text-decoration:none;}
+.pub-if{display:inline-block;font-size:.68rem;font-weight:500;padding:.1rem .45rem;border-radius:20px;background:var(--teal-light);color:var(--teal);margin-left:.3rem;}
+
+
+/* ── SIDEBAR WIDGETS ── */
+.widget{background:#fff;border:1px solid var(--border);border-radius:var(--r2);padding:1.25rem;margin-bottom:1.25rem;box-shadow:var(--shadow);}
+.widget h3{font-family:var(--serif);font-size:1rem;color:var(--accent);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
+.skill-list{display:flex;flex-direction:column;gap:.5rem;}
+.skill-row{display:flex;align-items:center;gap:.6rem;}
+.skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.skill-name{font-size:.8rem;color:var(--ink2);}
+.award-item{display:flex;gap:.75rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--paper3);}
+.award-item:last-child{border-bottom:none;}
+.award-icon{font-size:1.2rem;flex-shrink:0;margin-top:.05rem;}
+.award-text{font-size:.78rem;color:var(--ink2);line-height:1.4;}
+.award-text strong{color:var(--ink);display:block;font-weight:500;}
+.grant-item{padding:.6rem 0;border-bottom:1px solid var(--paper3);font-size:.78rem;color:var(--ink2);line-height:1.45;}
+.grant-item:last-child{border-bottom:none;}
+.grant-item strong{color:var(--ink);font-weight:500;}
+.grant-amount{display:inline-block;font-size:.7rem;font-weight:500;padding:.1rem .45rem;border-radius:20px;background:var(--gold-light);color:var(--gold);margin-left:.3rem;}
+
+/* ── SERVICE ── */
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.service-block{background:var(--paper2);border-radius:var(--r);padding:1rem;border:1px solid var(--border);}
+.service-block h3{font-size:.85rem;font-weight:500;color:var(--accent);margin-bottom:.5rem;}
+.service-block ul{list-style:none;display:flex;flex-direction:column;gap:.2rem;}
+.service-block li{font-size:.78rem;color:var(--ink2);line-height:1.4;}
+
+/* ── FOOTER ── */
+footer{background:var(--accent);color:rgba(255,255,255,.7);text-align:center;padding:2.5rem 2rem;font-size:.82rem;}
+footer a{color:rgba(255,255,255,.9);text-decoration:none;}
+footer strong{color:#fff;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:2rem;}
+  .hero-card{position:static;}
+  .page-body{grid-template-columns:1fr;}
+  .side-col{position:static;}
+  .project-grid,.service-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  nav{padding:0 1rem;}
+  .nav-links{display:none;}
+  .hero{padding:3rem 1rem 2.5rem;}
+  .page-body{padding:0 1rem 4rem;}
+  .news-item,.talk-item{grid-template-columns:1fr;}
+  .news-date,.talk-venue{font-size:.8rem;}
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-text{animation:fadeUp .55s ease both;}
+.hero-card{animation:fadeUp .55s .1s ease both;}
+section{animation:fadeUp .45s ease both;}
+</style>
 </head>
-<body class="container">
+<body>
 
-<header class="mb-4 text-center">
-  <img src="image.png" alt="Shaina Raza" />
-  <h1>Shaina Raza, PhD</h1>
-  <p>Applied ML Scientist · Responsible AI Scientist · <strong>Keynote Speaker</strong></p>
-  <p><strong>Top 2% Scientist (Stanford / Elsevier 2025 Update)</strong></p>
-  <p><strong>Partner:</strong> <a href="https://aixpert-project.eu/" target="_blank" rel="noopener">AIXPERT Project (EU Horizon)</a></p>
-  <p><strong>Winner:</strong> Responsible AI Leader of the Year (2025)</p>
-  <p><strong>Contact:</strong> <a href="mailto:shaina.raza@torontomu.ca">shaina.raza@torontomu.ca</a> | <a href="https://www.linkedin.com/in/shainaraza/" target="_blank" rel="noopener">LinkedIn</a></p>
-</header>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Shaina Raza, PhD</a>
+    <ul class="nav-links">
+      <li><a href="#news">News</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#service">Service</a></li>
+    </ul>
+    <a href="mailto:shaina.raza@torontomu.ca" class="nav-btn">Contact</a>
+  </div>
+</nav>
 
-<section>
-  <h2 class="section-title">Award Spotlight</h2>
-  <div class="award-banner row">
-    <div class="col-md-8">
-      <h3>🏆 Responsible AI Leader of the Year</h3>
-      <p>Honored at the <strong>Women in AI Summit & Awards 2025 (North America)</strong> for leadership in ethical and trustworthy AI, championing fairness, accountability, and transparency.</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Shaina Raza, PhD<br><em>Responsible AI Leader</em></h1>
+    <p class="hero-subtitle">Applied Machine Learning Scientist at Vector Institute for Artificial Intelligence, Toronto · Expert in LLMs, Multimodal AI, Fairness &amp; Bias, Green AI, and AI Governance</p>
+    <div class="badge-row">
+      <span class="badge badge-gold">🏆 Responsible AI Leader of the Year 2025</span>
+      <span class="badge badge-navy">Top 2% Scientist — Stanford/Elsevier 2025</span>
+      <span class="badge badge-teal">EU Horizon AIXPERT Partner (€515K)</span>
+      <span class="badge badge-navy">2,889+ Citations</span>
+      <span class="badge badge-gold">ICML 2026 Spotlight</span>
     </div>
-    <div class="col-md-4 text-center"><img src="me.jpg" alt="Award Winner Dr. Shaina Raza"></div>
+    <div class="hero-links">
+      <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ" target="_blank" rel="noopener" class="btn btn-primary">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/shainaraza/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+      <a href="https://vectorinstitute.ai/team/shaina-raza/" target="_blank" rel="noopener" class="btn btn-outline">Vector Institute</a>
+      <a href="https://dblp.org/pid/236/9245.html" target="_blank" rel="noopener" class="btn btn-outline">DBLP</a>
+    </div>
   </div>
-</section>
-
-<section>
-  <h2 class="section-title">News & Updates</h2>
-  <ul class="news-updates">
-    <li><strong>October 2025:</strong> <strong>NeurIPS 2025 — 6 acceptances</strong> 
-      <span class="badge badge-primary">Education</span> 
-      <span class="badge badge-success">Workshops ×2</span> 
-      <span class="badge badge-info">Posters ×3</span>
-      <details class="mt-2">
-        <summary>Show details</summary>
-        <ul>
-          <li><em>From Data to CO₂: The Hidden Climate Cost of AI</em> — NeurIPS Education Materials · <a href="https://neurips-c02-viz.vercel.app/" target="_blank" rel="noopener">Project</a></li>
-          <li><em>Prompting Away Stereotypes? Evaluating Bias in Text-to-Image Models for Occupations</em> — NeurIPS 2025 GenProCC Workshop</li>
-          <li><em>Trust, Risk and Security in Agentic AI: A Short Survey</em> — LAW @ NeurIPS 2025</li>
-          <li><em>Bias in the Picture: Benchmarking VLMs with Social-Cue News Images and LLM-as-Judge Assessment</em> — LLM Evaluation Workshop (Poster)</li>
-          <li><em>LinguaMark: Do Multimodal Models Speak Fairly?</em> — LLM Evaluation Workshop (Poster)</li>
-          <li><em>Human-Centric Framework for Large Multimodal Models Evaluation</em> — LLM Evaluation Workshop (Poster)</li>
-        </ul>
-      </details>
-    </li>
-
-    <li><strong>October 2025:</strong> <strong>Co-organizer</strong>, <a href="https://aigovernance.github.io/" target="_blank" rel="noopener">AI Governance Workshop</a> — policy, risk, and audit for trustworthy AI.</li>
-
-    <li><strong>October 2025:</strong> <strong>Partner</strong>, <a href="https://aixpert-project.eu/" target="_blank" rel="noopener">AIXPERT Project (EU Horizon)</a> — trustworthy AI for industry.</li>
-
-    <li><strong>October 2025:</strong> Delivered keynote talks on Responsible AI and Multimodal Fairness across academic and industry venues, including <a href="https://www.ieeesmc.org/" target="_blank" rel="noopener">IEEE SMC</a>.</li>
-
-    <li><strong>October 2025:</strong> Recognized among the <strong>Top 2% Scientists Worldwide</strong> (Stanford / Elsevier 2025 Update). <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8" target="_blank" rel="noopener">Dataset link</a></li>
-    
-    <li><strong>September 2025:</strong> Appointed Editorial Member, <em>Springer Discover Computing</em> Journal [<a href="https://link.springer.com/journal/10791" target="_blank" rel="noopener">link</a>]</li>
-    <li><strong>August 2025:</strong> Paper accepted at <em>EMNLP 2025 Findings</em>: <a href="https://arxiv.org/abs/2508.03199" target="_blank" rel="noopener">Responsible Multimodal Benchmarks</a></li>
-    <li><strong>July 2025:</strong> Paper accepted at <em>ASONAM 2025</em>: <a href="https://arxiv.org/abs/2507.07274" target="_blank" rel="noopener">Social Bias Detection in Vision-Language Models</a></li>
-    <li><strong>July 2025:</strong> Preprint released: <a href="https://arxiv.org/abs/2507.00951" target="_blank" rel="noopener">Toward AGI: Human-Centric Perspectives</a></li>
-    <li><strong>June 2025:</strong> Winner, <em>Responsible AI Leader of the Year</em> at Women in AI Summit (USA, Canada, Mexico).</li>
-    <li><strong>June 2025:</strong> Talk at ResearchTrend.AI – “HumaniBench: A Human-Centric Framework for Large Multimodal Models Evaluation” [<a href="https://researchtrend.ai/social-events/researchtrend-connect-llmag-vlm-fedml-1" target="_blank" rel="noopener">link</a>]</li>
-    <li><strong>June 2025:</strong> AIXPERT project launched with EU Horizon (selected as 3 of 137) — partnering with the Vector Institute [<a href="https://cordis.europa.eu/project/id/101214389" target="_blank" rel="noopener">project details</a>]</li>
-    <li><strong>May 2025:</strong> Preprint released: <a href="https://arxiv.org/abs/2505.17870" target="_blank" rel="noopener">Just as Humans Need Vaccines, So Do Models</a> (Model Immunization to Combat Falsehoods)</li>
-    <li><strong>May 2025:</strong> Preprint released: <a href="https://arxiv.org/abs/2505.11454" target="_blank" rel="noopener">HumaniBench: A Human-Centric Framework for Large Multimodal Models Evaluation</a></li>
-    <li><strong>April 2025:</strong> Journal publication in <em>Machine Learning</em>: <a href="https://link.springer.com/article/10.1007/s10994-025-06767-4" target="_blank" rel="noopener">Developing Safe and Responsible LLMs</a></li>
-    <li><strong>April 2025:</strong> Green AI project success: <a href="https://arxiv.org/abs/2504.17119" target="_blank" rel="noopener">Reducing Emissions in LLMs</a>, <a href="https://arxiv.org/abs/2504.06307" target="_blank" rel="noopener">Sustainable AI Practices</a></li>
-    <li><strong>March 2025:</strong> Green AI Benchmark released: <a href="https://arxiv.org/abs/2503.02865" target="_blank" rel="noopener">Benchmarking Energy Footprints of AI Models</a></li>
-    <li><strong>February 2025:</strong> Preprint release: <a href="https://arxiv.org/abs/2502.11361" target="_blank" rel="noopener">VLBench: Benchmarking Vision-Language Models</a></li>
-  </ul>
-</section>
-
-<section class="contact-section">
-  <h2 class="section-title">About Me</h2>
-  <div class="highlight-box">
-    <p>I am Dr. Shaina Raza, an Applied Machine Learning Scientist specializing in Responsible AI, fairness, and multimodal LLMs. I lead research on equitable AI systems, human-centric benchmarking, and sustainability in AI. My work bridges academia and industry, driving Responsible AI adoption globally.</p>
+  <div class="hero-card">
+    <img src="image.png" alt="Dr. Shaina Raza"/>
+    <h2>Shaina Raza, PhD</h2>
+    <p class="role">Applied ML Scientist · Responsible AI<br>Vector Institute, Toronto</p>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">2,889+</div><div class="stat-label">Citations</div></div>
+      <div class="stat"><div class="stat-num">55+</div><div class="stat-label">Publications</div></div>
+      <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Keynotes</div></div>
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Mentored</div></div>
+    </div>
+    <div class="card-links">
+      <a href="mailto:shaina.raza@torontomu.ca" class="card-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        shaina.raza@torontomu.ca
+      </a>
+      <a href="https://orcid.org/0000-0003-1061-5845" target="_blank" rel="noopener" class="card-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        ORCID 0000-0003-1061-5845
+      </a>
+      <a href="https://aixpert-project.eu/" target="_blank" rel="noopener" class="card-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        AIXPERT EU Horizon Project
+      </a>
+      <a href="https://vectorinstitute.github.io/FairSense-AI/" target="_blank" rel="noopener" class="card-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        FairSense-AI Toolkit
+      </a>
+    </div>
   </div>
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:shaina.raza@torontomu.ca">shaina.raza@torontomu.ca</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shainaraza/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
-    <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ&hl=en" target="_blank" rel="noopener">My Publications</a></li>
-  </ul>
-</section>
+</div>
 
-<!-- Academic Service moved below About, collapsed by default -->
-<section id="service" class="mt-4">
-  <details>
-    <summary>Academic & Editorial Service</summary>
-    <div class="mt-3" style="font-size:0.95rem;">
-      <p class="mb-2">Contributions to peer review, editorial work, and conference organization in AI research and governance.</p>
-      <div class="row">
-        <div class="col-md-6 mb-2">
-          <strong>Program Committee</strong>
-          <ul class="mb-0">
-            <li>NeurIPS (Main Track)</li>
-            <li>NeurIPS Workshops — RegML, LAW, Position Paper Track</li>
-            <li>AI Governance Workshop — <a href="https://aigovernance.github.io/" target="_blank" rel="noopener">site</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 mb-2">
-          <strong>Editorial & Reviewer Roles</strong>
-          <ul class="mb-0">
-            <li>Nature — Reviewer</li>
-            <li>Elsevier Journals — Reviewer / Guest Editor</li>
-            <li>Springer Journals — Reviewer / Editorial Roles</li>
-            <li>Editorial Board — <em>Springer Discover Computing</em></li>
-          </ul>
-        </div>
+<!-- PAGE BODY -->
+<div class="page-body">
+<div class="main-col">
+
+<!-- NEWS -->
+<section id="news">
+  <div class="section-head">
+    <h2>News &amp; Updates</h2>
+    <span class="section-tag">2025 – 2026</span>
+  </div>
+  <div class="news-list">
+
+    <div class="news-item">
+      <div class="news-date">May 2026</div>
+      <div class="news-body"><strong>Keynote Speaker — GREEN-AI Workshop @ ICML 2026</strong> (Helmholtz AI)<span class="news-tag tag-icml">ICML 2026 Spotlight</span><br>Presenting <em>"Sustainable Open-Source AI Requires Tracking the Cumulative Footprint of Derivatives"</em> — introducing the <strong>Data and Impact Accounting (DIA)</strong> framework. Accepted as a <strong>Spotlight Position Paper at ICML 2026</strong>. <a href="https://arxiv.org/abs/2601.21632" target="_blank" rel="noopener">Paper →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jan 2026</div>
+      <div class="news-body"><strong>Panelist — AAAI 2026 AI Governance Workshop (AIGOV)</strong>, Singapore<span class="news-tag tag-talk">Talk</span><br>AI Governance, Safety and Responsible AI panel alongside IBM Research, Google DeepMind, Microsoft Research, Kush Varshney, and Francesca Rossi. <a href="https://aigovernance.github.io/" target="_blank" rel="noopener">Workshop →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jan 2026</div>
+      <div class="news-body">Journal: <strong>VLDBench: Evaluating Multimodal Disinformation with Regulatory Alignment</strong><span class="news-tag tag-pub">IF 18.6</span><br><em>Information Fusion</em> (2026) — Q1, IF 18.6. <a href="https://vectorinstitute.github.io/VLDBench/" target="_blank" rel="noopener">Project →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jan 2026</div>
+      <div class="news-body">Journal: <strong>TRiSM for Agentic AI: Trust, Risk and Security in LLM-based Multi-Agent Systems</strong><br><em>AI Open</em> (2026). <a href="https://doi.org/10.1016/j.aiopen.2026.02.006" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jan 2026</div>
+      <div class="news-body">Journal: <strong>Review-based Recommender Systems: Survey of Approaches, Challenges and Future Perspectives</strong><br><em>ACM Computing Surveys</em> (2026). <a href="https://doi.org/10.1145/3742421" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Oct 2025</div>
+      <div class="news-body"><strong>NeurIPS 2025 — 6 Acceptances</strong><span class="news-tag tag-neurips">NeurIPS</span><br>
+        Education ×2, Workshops ×1, Posters ×3:<br>
+        · <em>From Data to CO₂: The Hidden Climate Cost of AI</em> — Education Materials <a href="https://neurips-c02-viz.vercel.app/" target="_blank" rel="noopener">↗</a><br>
+        · <em>Prompting Away Stereotypes? Evaluating Bias in Text-to-Image Models</em> — GenProCC Workshop<br>
+        · <em>Trust, Risk and Security in Agentic AI</em> — LAW@NeurIPS<br>
+        · <em>Bias in the Picture: Benchmarking VLMs with Social-Cue News Images</em> — Poster<br>
+        · <em>LinguaMark: Do Multimodal Models Speak Fairly?</em> — Poster<br>
+        · <em>HumaniBench: Human-Centric Framework for Multimodal Models</em> — Poster
       </div>
     </div>
-  </details>
+
+    <div class="news-item">
+      <div class="news-date">Oct 2025</div>
+      <div class="news-body">Co-organizer, <strong>AI Governance Workshop</strong> — policy, risk, and audit for trustworthy AI. <a href="https://aigovernance.github.io/" target="_blank" rel="noopener">Site →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Oct 2025</div>
+      <div class="news-body">Keynote at <strong>IEEE SMC 2025</strong> — Responsible AI and Multimodal Fairness<span class="news-tag tag-talk">Keynote</span></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Oct 2025</div>
+      <div class="news-body">Recognized among <strong>Top 2% Scientists Worldwide</strong> — Stanford / Elsevier 2025 Update.<span class="news-tag tag-award">Top 2%</span> <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8" target="_blank" rel="noopener">Dataset →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Sep 2025</div>
+      <div class="news-body">Appointed <strong>Editorial Member</strong>, <em>Springer Discover Computing</em> Journal. <a href="https://link.springer.com/journal/10791" target="_blank" rel="noopener">Journal →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Aug 2025</div>
+      <div class="news-body">Paper accepted at <strong>EMNLP 2025 Findings</strong>: <a href="https://arxiv.org/abs/2508.03199" target="_blank" rel="noopener">HumaniBench: Responsible Multimodal Benchmarks</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jul 2025</div>
+      <div class="news-body">Paper accepted at <strong>ASONAM 2025</strong>: <a href="https://arxiv.org/abs/2507.07274" target="_blank" rel="noopener">Social Bias Detection in Vision-Language Models</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jun 2025</div>
+      <div class="news-body"><strong>🏆 Winner — Responsible AI Leader of the Year</strong>, Women in AI Summit &amp; Awards 2025 (North America)<span class="news-tag tag-award">Award</span></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jun 2025</div>
+      <div class="news-body"><strong>AIXPERT (EU Horizon) launched</strong> — Vector Institute selected as 1 of 3 from 137 global applicants. Grant No. 101214389, <strong>€515K</strong>. <a href="https://cordis.europa.eu/project/id/101214389" target="_blank" rel="noopener">CORDIS →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Apr 2025</div>
+      <div class="news-body">Journal: <strong>Developing Safe and Responsible LLMs</strong><span class="news-tag tag-pub">IF 7.5</span><br><em>Machine Learning</em>, Springer (2025). <a href="https://link.springer.com/article/10.1007/s10994-025-06767-4" target="_blank" rel="noopener">Paper →</a></div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Mar 2025</div>
+      <div class="news-body">Green AI Benchmark released: <a href="https://arxiv.org/abs/2503.02865" target="_blank" rel="noopener">Benchmarking Energy Footprints of AI Models</a></div>
+    </div>
+
+  </div>
 </section>
 
-<footer><p>© 2025 Shaina Raza, PhD. All rights reserved.</p></footer>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-head">
+    <h2>Research Projects</h2>
+    <span class="section-tag">Active &amp; Recent</span>
+  </div>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#e8f0f8;">🌐</div>
+      <h3>AIXPERT — EU Horizon</h3>
+      <p>Trustworthy AI for industry. Vector Institute selected as 1 of 3 from 137 global applicants. Grant No. 101214389, €515K.</p>
+      <a href="https://aixpert-project.eu/" target="_blank" rel="noopener">aixpert-project.eu →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#e1f5ee;">⚖️</div>
+      <h3>FairSense-AI</h3>
+      <p>Comprehensive toolkit for fairness, sustainability, and explainability in large-scale AI systems. Bias auditing, emissions reduction, responsible AI compliance.</p>
+      <a href="https://vectorinstitute.github.io/FairSense-AI/" target="_blank" rel="noopener">FairSense-AI →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#fdf6e3;">🔬</div>
+      <h3>HumaniBench</h3>
+      <p>Human-centric benchmark evaluating fairness, social bias, and empathy in large multimodal models. Multilingual and adversarial test cases.</p>
+      <a href="https://arxiv.org/abs/2505.11454" target="_blank" rel="noopener">arXiv:2505.11454 →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#f3e8fd;">📊</div>
+      <h3>VLDBench</h3>
+      <p>Benchmark for evaluating vision-language models on multimodal disinformation detection with regulatory alignment. Published in Information Fusion (IF 18.6).</p>
+      <a href="https://vectorinstitute.github.io/VLDBench/" target="_blank" rel="noopener">VLDBench →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#e1f5ee;">♻️</div>
+      <h3>Green AI &amp; Sustainability</h3>
+      <p>Energy footprint benchmarking of AI models, sustainable LLM training, and carbon reduction research. Spotlight at ICML 2026 (Helmholtz AI Workshop).</p>
+      <a href="https://arxiv.org/abs/2503.02865" target="_blank" rel="noopener">GreenBench →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#fce7f3;">🛡️</div>
+      <h3>UnBias Framework</h3>
+      <p>Pipeline to surface, audit, and reduce bias in generative and classification models using social cues. Benchmark data and bias metrics across language, vision, and structured inputs.</p>
+      <a href="https://unbias-mkdocs.readthedocs.io/en/latest/" target="_blank" rel="noopener">Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#e8f0f8;">💉</div>
+      <h3>Model Immunization</h3>
+      <p>Techniques for immunizing LLMs against falsehoods and harmful content, improving robustness and factuality. Accepted at IEEE WCCI/IJCNN 2026.</p>
+      <a href="https://arxiv.org/abs/2505.17870" target="_blank" rel="noopener">arXiv:2505.17870 →</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon" style="background:#fdf6e3;">🏥</div>
+      <h3>Equity in Public Health AI</h3>
+      <p>Embedding fairness and equitable decision-making in AI systems for public health surveillance. CIHR HSI Fellowship ($175K) + AI4PH Award ($20K/yr).</p>
+      <a href="https://www.cihr-irsc.gc.ca/e/52641.html?filter=shaina" target="_blank" rel="noopener">CIHR Fellowship →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="section-head">
+    <h2>Selected Publications</h2>
+    <span class="section-tag">Full list on Google Scholar · 2,889+ citations</span>
+  </div>
+
+  <p style="font-size:.85rem;color:var(--ink3);margin-bottom:1.25rem;">Showing recent high-impact work. <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);">View all on Google Scholar →</a></p>
+
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <div class="pub-title">VLDBench: Evaluating Multimodal Disinformation with Regulatory Alignment</div>
+      <div class="pub-meta">Raza, S. et al. · <em>Information Fusion</em> (2026)<span class="pub-if">IF 18.6 · Q1</span> · <a href="https://doi.org/10.1016/j.inffus.2025.104092" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">TRiSM for Agentic AI: Trust, Risk and Security in LLM-based Agentic Multi-Agent Systems</div>
+      <div class="pub-meta">Raza, S. et al. · <em>AI Open</em> (2026) · <a href="https://doi.org/10.1016/j.aiopen.2026.02.006" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Review-based Recommender Systems: A Survey of Approaches, Challenges and Future Perspectives</div>
+      <div class="pub-meta">Hasan, E., Rahman, M., Ding, C., Huang, J., Raza, S. · <em>ACM Computing Surveys</em> (2026) · <a href="https://doi.org/10.1145/3742421" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice</div>
+      <div class="pub-meta">Raza, S. et al. · <em>Computer Science Review</em> (2026) · <a href="https://doi.org/10.1016/j.cosrev.2025.100849" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Sustainable Open-Source AI Requires Tracking the Cumulative Footprint of Derivatives</div>
+      <div class="pub-meta">Raza, S. et al. · <em>ICML 2026 (Spotlight Position Paper)</em> · <a href="https://arxiv.org/abs/2601.21632" target="_blank" rel="noopener">arXiv →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Developing Safe and Responsible Large Language Models</div>
+      <div class="pub-meta">Raza, S. et al. · <em>Machine Learning</em>, Springer (2025)<span class="pub-if">IF 7.5 · Q1</span> · <a href="https://link.springer.com/article/10.1007/s10994-025-06767-4" target="_blank" rel="noopener">Paper →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">HumaniBench: A Human-Centric Framework for Large Multimodal Models Evaluation</div>
+      <div class="pub-meta">Raza, S. et al. · <em>EMNLP Findings</em> (2025) · <a href="https://arxiv.org/abs/2508.03199" target="_blank" rel="noopener">arXiv →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">RESPECT: A Framework for Promoting Inclusive and Respectful Conversations in Online Communications</div>
+      <div class="pub-meta">Raza, S. et al. · <em>Natural Language Processing Journal</em> (2025) · <a href="https://doi.org/10.1016/j.nlp.2025.100126" target="_blank" rel="noopener">DOI →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">MBIAS: Mitigating Bias in Large Language Models While Retaining Context</div>
+      <div class="pub-meta">Raza, S., Raval, A., Chatrath, V. · <em>ACL 2024, WASSA Workshop</em> · <a href="https://arxiv.org/abs/2405.11290" target="_blank" rel="noopener">arXiv →</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">NBIAS: A Natural Language Processing Framework for Bias Identification in Text</div>
+      <div class="pub-meta">Raza, S. et al. · <em>Expert Systems with Applications</em> (2023)<span class="pub-if">IF 8.5 · Q1</span></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Fake News Detection Based on News Content and Social Contexts: A Transformer-Based Approach</div>
+      <div class="pub-meta">Raza, S. &amp; Ding, C. · <em>Int. J. Data Science &amp; Analytics</em> (2022)<span class="pub-if">IF 2.4 · 200+ citations</span></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Progress in Context-Aware Recommender Systems — An Overview</div>
+      <div class="pub-meta">Raza, S. &amp; Ding, C. · <em>Computer Science Review</em> (2019)<span class="pub-if">IF 13.3 · Q1</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TALKS -->
+<section id="talks">
+  <div class="section-head">
+    <h2>Invited Talks &amp; Keynotes</h2>
+    <span class="section-tag">2023 – 2026</span>
+  </div>
+  <div class="talks-list">
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">ICML 2026</div>
+        <div class="talk-meta">GREEN-AI Workshop · Helmholtz AI · Spotlight</div>
+      </div>
+      <div>
+        <div class="talk-title">"Sustainable Open-Source AI Requires Tracking the Cumulative Footprint of Derivatives" <em>· Data &amp; Impact Accounting (DIA) framework · Spotlight Position Paper</em></div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">AAAI 2026</div>
+        <div class="talk-meta">AI Governance Workshop · Singapore · Jan 2026</div>
+      </div>
+      <div>
+        <div class="talk-title">Panelist — AI Governance, Safety and Responsible AI <em>· alongside IBM Research, Google DeepMind, Microsoft Research</em></div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">IEEE SMC 2025</div>
+        <div class="talk-meta">Keynote · Oct 2025</div>
+      </div>
+      <div>
+        <div class="talk-title">Responsible AI and Multimodal Fairness</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">NeurIPS 2025</div>
+        <div class="talk-meta">AI Governance Workshop · Co-organizer</div>
+      </div>
+      <div>
+        <div class="talk-title">Co-organizer &amp; Presenter — Policy, Risk, and Audit for Trustworthy AI</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">ResearchTrend.AI</div>
+        <div class="talk-meta">Jun 2025</div>
+      </div>
+      <div>
+        <div class="talk-title">"HumaniBench: A Human-Centric Framework for Large Multimodal Models Evaluation"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">Cohere, USA</div>
+        <div class="talk-meta">Jul 2024</div>
+      </div>
+      <div>
+        <div class="talk-title">"Mitigating Biases in Text &amp; LLMs — Challenges and Strategies"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">Conestoga College</div>
+        <div class="talk-meta">AI Symposium · Nov 2024</div>
+      </div>
+      <div>
+        <div class="talk-title">"AI and Data Privacy and Ethics"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">ECIR 2024</div>
+        <div class="talk-meta">Scotland · Mar 2024</div>
+      </div>
+      <div>
+        <div class="talk-title">"Dissecting News Narratives and Misinformation"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">York University</div>
+        <div class="talk-meta">Lassonde School · Mar 2024</div>
+      </div>
+      <div>
+        <div class="talk-title">"Enhancing Fairness in Large Language Models"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">Rogers Catalyst</div>
+        <div class="talk-meta">TMU · Jan 2024</div>
+      </div>
+      <div>
+        <div class="talk-title">"Cybersecurity and AI — Who Loses? The Case for More Inclusive Engagement"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">AAAI 2023</div>
+        <div class="talk-meta">Human-Medical AI Symposium · Aug 2023</div>
+      </div>
+      <div>
+        <div class="talk-title">"Fairness in Machine Learning Meets with Equity in Healthcare"</div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">ICA 2023</div>
+        <div class="talk-meta">Keynote · Jun 2023</div>
+      </div>
+      <div>
+        <div class="talk-title">"Accuracy Meets Diversity in a News Recommender System" <em>· Keynote Address</em></div>
+      </div>
+    </div>
+
+    <div class="talk-item">
+      <div>
+        <div class="talk-venue">Rice University</div>
+        <div class="talk-meta">BRC Dept · Apr 2023</div>
+      </div>
+      <div>
+        <div class="talk-title">"Connecting Fairness in Machine Learning with Public Health Equity"</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICE -->
+<section id="service">
+  <div class="section-head">
+    <h2>Professional Service</h2>
+  </div>
+  <div class="service-grid">
+
+    <div class="service-block">
+      <h3>Program Committees</h3>
+      <ul>
+        <li>NeurIPS — Main Track + RegML, LAW, SoLaR, GenProCC, Position Paper Workshops</li>
+        <li>AAAI · ACL · ICLR · ICML · KDD</li>
+        <li>IJCAI · CIKM · ECCV · IEEE Big Data</li>
+        <li>AI Governance Workshop @ NeurIPS 2025 — Co-organizer</li>
+        <li>AAAI Workshop on Responsible LMs (ReLM 2024) — Co-lead</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>Editorial Roles</h3>
+      <ul>
+        <li>Springer Discover Computing — Editorial Member (2025–present)</li>
+        <li>Elsevier CS Portfolio — Transfer Manager &amp; Scientific Editor (2021–present)</li>
+        <li>IEEE Transactions on AI — Review Editor (2023–present)</li>
+        <li>Frontiers in Big Data — Review Editor (2022–present)</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>Journal Reviewing</h3>
+      <ul>
+        <li>Nature · Nature Machine Intelligence</li>
+        <li>Lancet Digital Health · Science Robotics</li>
+        <li>JAMA Network Open · JAMIA</li>
+        <li>BMC Public Health · PLOS ONE</li>
+        <li>IEEE Trans. Knowledge &amp; Data Engineering</li>
+        <li>Artificial Intelligence in Medicine</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <h3>Grant Review Committees</h3>
+      <ul>
+        <li>CIHR Doctoral Research Awards — Peer Review Committee Member</li>
+        <li>National Killam Program — Peer Reviewer</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- end main-col -->
+
+<!-- SIDEBAR -->
+<div class="side-col">
+
+  <div class="widget">
+    <h3>Awards &amp; Recognition</h3>
+    <div class="award-item">
+      <div class="award-icon">🏆</div>
+      <div class="award-text"><strong>Responsible AI Leader of the Year</strong>Women in AI Summit 2025 (North America)</div>
+    </div>
+    <div class="award-item">
+      <div class="award-icon">🔬</div>
+      <div class="award-text"><strong>Top 2% Scientists Worldwide</strong>Stanford / Elsevier 2025 Update</div>
+    </div>
+    <div class="award-item">
+      <div class="award-icon">🎖️</div>
+      <div class="award-text"><strong>ICML 2026 Spotlight Position Paper</strong>GREEN-AI Workshop, Helmholtz AI</div>
+    </div>
+    <div class="award-item">
+      <div class="award-icon">🎓</div>
+      <div class="award-text"><strong>Governor General Gold Medal Nominee</strong>Toronto Metropolitan University, 2021</div>
+    </div>
+  </div>
+
+  <div class="widget">
+    <h3>Grants &amp; Fellowships</h3>
+    <div class="grant-item"><strong>EU Horizon AIXPERT</strong><span class="grant-amount">€515K</span><br>Co-Applicant · Grant No. 101214389 · 2025–present</div>
+    <div class="grant-item"><strong>CIHR Health System Impact Fellowship</strong><span class="grant-amount">$175K</span><br>2021–2023</div>
+    <div class="grant-item"><strong>CIHR-IPPH Postdoctoral Research Fellowship</strong><span class="grant-amount">$85K/yr</span><br>2021–2023</div>
+    <div class="grant-item"><strong>CIHR Post-COVID Disparity Analysis</strong><span class="grant-amount">$100K</span><br>Co-Applicant · 2023–2024</div>
+    <div class="grant-item"><strong>AI4PH Postdoctoral Award</strong><span class="grant-amount">$20K/yr</span><br>CIHR IRSC · 2022–2023</div>
+    <div class="grant-item"><strong>Ontario Graduate Scholarship</strong><span class="grant-amount">$15K/yr</span><br>Twice awarded · 2019–2021</div>
+    <div class="grant-item"><strong>NSERC Research Stipend</strong><span class="grant-amount">$11K/yr</span><br>4 years · 2016–2020</div>
+  </div>
+
+  <div class="widget">
+    <h3>Technical Expertise</h3>
+    <div class="skill-list">
+      <div class="skill-row"><div class="skill-dot" style="background:#1a3a5c;"></div><div class="skill-name">LLMs &amp; Vision-Language Models</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#0f6e56;"></div><div class="skill-name">Responsible AI &amp; Fairness</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#b8860b;"></div><div class="skill-name">Green AI &amp; Sustainability</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#5b21b6;"></div><div class="skill-name">AI Governance &amp; Policy</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#9d174d;"></div><div class="skill-name">Multimodal AI Benchmarking</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#1a3a5c;"></div><div class="skill-name">NLP &amp; Text Bias Detection</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#0f6e56;"></div><div class="skill-name">Health Informatics &amp; Equity</div></div>
+      <div class="skill-row"><div class="skill-dot" style="background:#b8860b;"></div><div class="skill-name">PyTorch · HuggingFace · AWS · MLflow</div></div>
+    </div>
+  </div>
+
+  <div class="widget">
+    <h3>Media Coverage</h3>
+    <div style="display:flex;flex-direction:column;gap:.5rem;">
+      <a href="#" style="font-size:.78rem;color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:.4rem;">→ Toronto Star: Canadian Visionaries on Our Greatest Discoveries</a>
+      <a href="#" style="font-size:.78rem;color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:.4rem;">→ Vector Institute: UnBIAS Framework Revolutionizes Ethical Text Analysis</a>
+      <a href="#" style="font-size:.78rem;color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:.4rem;">→ TMU Newsletter: A More Ethical Approach to News Recommender Systems</a>
+      <a href="#" style="font-size:.78rem;color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:.4rem;">→ Vector Institute: AI &amp; Public Health — NLP for Clinical Database Management</a>
+    </div>
+  </div>
+
+</div><!-- end side-col -->
+</div><!-- end page-body -->
+
+<footer>
+  <p style="margin-bottom:.5rem;"><strong>Shaina Raza, PhD</strong> · Applied ML Scientist, Responsible AI · Vector Institute for Artificial Intelligence</p>
+  <p><a href="mailto:shaina.raza@torontomu.ca">shaina.raza@torontomu.ca</a> · <a href="https://www.linkedin.com/in/shainaraza/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=chcz7RMAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://orcid.org/0000-0003-1061-5845" target="_blank" rel="noopener">ORCID</a> · <a href="https://dblp.org/pid/236/9245.html" target="_blank" rel="noopener">DBLP</a></p>
+  <p style="margin-top:1rem;opacity:.5;">© 2026 Shaina Raza, PhD. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
